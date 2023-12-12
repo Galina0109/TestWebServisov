@@ -1,1 +1,1 @@
-git
+[![Java CI with Gradle](https://github.com/Galina0109/TestWebServisov/actions/workflows/gradle.yml/badge.svg)](https://github.com/Galina0109/TestWebServisov/actions/workflows/gradle.yml)
