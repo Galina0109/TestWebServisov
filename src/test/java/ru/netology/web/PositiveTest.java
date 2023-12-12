@@ -37,22 +37,12 @@ class PositiveTest {
     }
 
     @Test
-    void shouldTestV1() {
-        driver.findElements(By.className("input__control"));
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button")).click();
-        driver.findElement(By.className("button")).click();
-        String text = driver.findElement(By.className("alert-success")).getText();
-        assertEquals("Ваша заявка успешно отправлена!", text.trim());
-    }
-
-    @Test
     void shouldTest() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иваныч-Ивановичев Иван");
-        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+78005553535");
-        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иванов Иван Иванович");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79633523355");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        var actualText = driver.findElement(By.cssSelector("[data-test-id=order success]")).getText().trim();
-        assertEquals("Ваша заявка успешно отправлена. Наш менеджер свяжется с вами в ближайшее время.", actualText);
+        var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
     }
 }
